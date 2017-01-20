@@ -5,6 +5,8 @@ services:
 
 script:
   - docker build -t git-tip .
+  
+after_success:
   - docker tag git-tip djoudix/git-tip
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push djoudix/git-tip
