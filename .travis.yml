@@ -5,4 +5,5 @@ services:
 
 script:
   - docker build -t git-tip .
+  - docker tag git-tip djoudix/git-tip
   - docker push djoudix/git-tip
